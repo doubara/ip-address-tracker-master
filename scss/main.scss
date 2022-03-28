@@ -10,6 +10,15 @@
 
     @include util.breakpoint('medium'){
         min-height: 35vh;
-        color: red;
     }
+}
+.attribution {
+    font-size: 11px; text-align: center;
+     a { 
+         color: hsl(228, 45%, 44%);
+    }
+    color: globals.$Dark-Gray;
+}
+.map-area{
+    min-height: 50vh;
 }
