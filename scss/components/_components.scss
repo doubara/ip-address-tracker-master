@@ -1,0 +1,45 @@
+@use "../globals";
+@use "../util";
+.modal{
+    background-color: white;
+    color: black;
+    /*Beginning of position styles*/
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    // /*End of Position Styles*/
+    text-align: center;
+    border-radius: 8px;
+    padding-block: 1.5rem;
+    box-shadow: 0px 0px 1px 1px rgb(#000000, .2);
+
+    /*POSITIONING STYLES*/
+    margin-inline: auto;
+    @include util.flex;
+    @include util.breakpoint-down('small'){
+        @include util.flex($flex-dir: column);
+        max-width: 400px;
+        > *:not(:last-of-type){
+            margin-bottom: 1rem
+        }
+        // padding-inline: 8rem;
+        width: 300px;
+        /*POSITION STYLES FOR MOBILE*/
+        bottom: -50%;
+    } 
+
+    p{
+        color: globals.$Dark-Gray;
+        margin-bottom: .3rem;
+      }
+      @include util.breakpoint('medium'){
+          > *:not(:last-of-type){
+              padding-right: 1rem;
+          }
+
+          padding-inline: 1rem;
+
+          /*POSITIONING STYLES FOR DESKTOP*/
+          top: 80%;
+      }
+  }

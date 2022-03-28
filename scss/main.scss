@@ -1,0 +1,15 @@
+@use "./globals";
+@use "./components";
+@use "./util";
+
+.section-1{
+    min-height: 50vh;
+    background-image: url(../images/pattern-bg.png);
+    padding: 2rem;
+    position: relative;
+
+    @include util.breakpoint('medium'){
+        min-height: 35vh;
+        color: red;
+    }
+}
